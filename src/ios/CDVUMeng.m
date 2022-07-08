@@ -6,8 +6,11 @@
 @implementation CDVUMeng
 - (void)pluginInitialize
 {
-    NSLog(@"--------------- init CDVUMeng --------");
+    NSLog(@"--------------- init CDVUMeng -------- %@",[self settingForKey:@"umeng.key"]);
     [UMConfigure initWithAppkey:[self settingForKey:@"umeng.key"] channel:@"App Store"];
+    [UMCommonHandler setVerifySDKInfo:[self settingForKey:@"umeng.verify"] complete:^(NSDictionary * _Nonnull resultDic) {
+        NSLog(@"%@",resultDic);
+    }];
 }
 
 -(void)open_one_key_auth:(CDVInvokedUrlCommand *)command
