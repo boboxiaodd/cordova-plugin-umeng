@@ -1,4 +1,4 @@
 #import <Cordova/CDVPlugin.h>
-@interface CDVInputBar : CDVPlugin {}
+@interface CDVUMeng : CDVPlugin {}
 
 @end
