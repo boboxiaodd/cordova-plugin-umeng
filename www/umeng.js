@@ -1,19 +1,10 @@
 const exec = require('cordova/exec');
 const CDVInputBar = {
-    createChatBar:function (success,option){
-        exec(success,null,'CDVInputBar','createChatBar',[option]);
+    open_one_key_auth:function (success,option){
+        exec(success,null,'CDVUMeng','open_one_key_auth',[option]);
     },
-    change_textField_placeholder:function (option) {
-        exec(null,null,'CDVInputBar','change_textField_placeholder',[option]);
-    },
-    resetChatBar:function (){
-        exec(null,null,'CDVInputBar','resetChatBar',[]);
-    },
-    closeChatBar:function (){
-        exec(null,null,'CDVInputBar','closeChatBar',[]);
-    },
-    showInputBar:function (success,option){
-        exec(success,null,'CDVInputBar','showInputBar',[option]);
+    close_one_key_auth:function (){
+        exec(null,null,'CDVUMeng','close_one_key_auth',[]);
     }
 };
 module.exports = CDVInputBar;
