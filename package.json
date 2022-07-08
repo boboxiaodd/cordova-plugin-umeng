@@ -1,0 +1,14 @@
+{
+    "name": "umeng",
+    "version": "0.0.1",
+    "description": "cordova umeng",
+    "cordova": {
+        "id": "umeng",
+        "platforms": [
+            "ios"
+        ]
+    },
+    "keywords": [],
+    "author": "bobo",
+    "license": "MIT"
+}

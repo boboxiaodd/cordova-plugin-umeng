@@ -1,0 +1,29 @@
+<?xml version='1.0' encoding='utf-8'?>
+<plugin id="cordova-plugin-umeng" version="0.0.1" xmlns="http://apache.org/cordova/ns/plugins/1.0">
+    <name>CDVUMeng</name>
+    <js-module name="CDVUMeng" src="www/umeng.js">
+        <clobbers target="CDVUMeng" />
+    </js-module>
+    <platform name="ios">
+        <config-file parent="/*" target="config.xml">
+            <feature name="CDVUMeng">
+                <param name="ios-package" value="CDVUMeng" />
+                <param name="onload" value="true" />
+            </feature>
+        </config-file>
+        <header-file src="src/ios/CDVUMeng.h" />
+        <source-file src="src/ios/CDVUMeng.m" />
+        <podspec>
+            <config>
+                <source url="https://github.com/CocoaPods/Specs.git"/>
+            </config>
+            <pods use-frameworks="true">
+                <pod name="UMCommon" />
+                <pod name="UMDevice" />
+                <pod name="UMAPM" />
+                <pod name="UMVerify" />
+            </pods>
+        </podspec>
+
+    </platform>
+</plugin>
