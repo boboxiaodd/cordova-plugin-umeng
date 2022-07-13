@@ -1,5 +1,5 @@
 const exec = require('cordova/exec');
-const CDVInputBar = {
+const CDVUMeng = {
     open_one_key_auth:function (success,option){
         exec(success,null,'CDVUMeng','open_one_key_auth',[option]);
     },
@@ -7,4 +7,4 @@ const CDVInputBar = {
         exec(null,null,'CDVUMeng','close_one_key_auth',[]);
     }
 };
-module.exports = CDVInputBar;
+module.exports = CDVUMeng;
