@@ -7,7 +7,8 @@
 - (void)pluginInitialize
 {
     NSLog(@"--------------- init CDVUMeng -------- %@",[self settingForKey:@"umeng.key"]);
-    [UMConfigure initWithAppkey:[self settingForKey:@"umeng.key"] channel:@"App Store"];
+    NSDictionary * infoDic = NSBundle.mainBundle.infoDictionary;
+    [UMConfigure initWithAppkey:[self settingForKey:@"umeng.key"] channel:[infoDic objectForKey:@"CFBundleIdentifier"]];
     [UMCommonHandler setVerifySDKInfo:[self settingForKey:@"umeng.verify"] complete:^(NSDictionary * _Nonnull resultDic) {
         NSLog(@"%@",resultDic);
     }];
