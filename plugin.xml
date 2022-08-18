@@ -21,7 +21,6 @@
                 <pod name="UMCommon" />
                 <pod name="UMDevice" />
                 <pod name="UMAPM" />
-                <pod name="UMVerify" />
             </pods>
         </podspec>
 
