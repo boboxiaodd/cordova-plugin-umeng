@@ -1,6 +1,7 @@
 #import <Cordova/CDV.h>
 #import "CDVUMeng.h"
 #import <UMCommon/UMCommon.h>
+#import <UMAPM/UMCrashConfigure.h>
 
 @implementation CDVUMeng
 - (void)pluginInitialize
@@ -12,6 +13,14 @@
 - (void)getUMID:(CDVInvokedUrlCommand *)command{
     NSString *uid = UMConfigure.umidString;
     [self send_event:command withMessage:@{@"umid":uid} Alive:NO State:YES];
+}
+
+- (void)setUId:(CDVInvokedUrlCommand *)command{
+    NSDictionary *options = [command.arguments objectAtIndex: 0];
+    NSString *uid = [options valueForKey:@"uid"];
+    [UMCrashConfigure setCrashCBBlock:^NSString * _Nullable{
+        return uid;
+    }];
 }
 
 #pragma mark 公共方法
