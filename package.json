@@ -1,5 +1,5 @@
 {
-    "name": "umeng",
+    "name": "cordova-plugin-umeng",
     "version": "0.0.1",
     "description": "cordova umeng",
     "cordova": {
